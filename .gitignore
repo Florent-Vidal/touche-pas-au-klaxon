@@ -17,4 +17,3 @@ config/database.php
  
 # Cache
 *.cache
-EOF

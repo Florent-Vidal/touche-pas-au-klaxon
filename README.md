@@ -14,7 +14,7 @@ Application web de covoiturage inter-sites permettant aux employes de proposer e
 ### 1. Cloner le depot
 
 ```bash
-git clone https://github.com/IdhZY/touche-pas-au-klaxon.git
+git clone https://github.com/Florent-Vidal/touche-pas-au-klaxon.git
 cd touche-pas-au-klaxon
 ```
 
@@ -33,7 +33,13 @@ mysql -u root -p < sql/seed_database.sql
 
 ### 4. Configurer la connexion
 
-Modifier le fichier `config/database.php` avec vos identifiants MySQL :
+Copier le modèle de configuration, puis y renseigner vos identifiants MySQL :
+
+```bash
+cp config/database.example.php config/database.php
+```
+
+Le fichier `config/database.php` est ignoré par Git afin que vos identifiants ne soient jamais publiés. Contenu attendu :
 
 ```php
 return [
